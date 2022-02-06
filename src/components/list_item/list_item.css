@@ -1,0 +1,19 @@
+.listItem {
+    transition: .2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background:white;
+    border: 1px solid rgba(197, 197, 197, 0.2);
+    padding: 18px;
+    border-radius: 12px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    margin: 10px;
+    color:rgb(56, 56, 56);
+}
+
+.listItem:hover {
+    transition: .2s ease;
+    transform: scale(1.1);
+}

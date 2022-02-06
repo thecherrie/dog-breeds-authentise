@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  margin:0;padding:0;
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: linear-gradient(90deg, rgba(226,0,255,1) 0%, rgba(255,111,0,1) 100%);
+  /* box-sizing: border-box;
+  margin: 0; */
+  font-family: 'Nunito Sans', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +20,95 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  margin:0;
+  font-weight: 800;
+}
+
+h2{
+  margin:0;
+}
+
+.container {
+  background:white;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 968px;
+  margin: 60px auto 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* .containerBg {
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  
+} */
+
+.search {
+  margin: 10px 0;
+  position: relative;
+  z-index: 2;
+  border:none;
+  border-radius: 50px;
+  font-size: 16px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: transparent solid 2px;
+}
+
+.search:focus {
+  transition: .2s ease;
+  outline:none;
+}
+
+@keyframes slide-in-suggestions {
+  from { height: 0}
+  to { height: 230px}
+}
+
+.suggestions {
+  animation-name: slide-in-suggestions;
+  animation-duration: .2s;
+  /* height: 230px; */
+  overflow-y: scroll;
+  background: rgb(250, 250, 250);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  top:-30px;
+  z-index: 0;
+  position: relative;
+  /* border-radius: 20px; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 30px 10px 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+
+@media screen and (min-width: 768px) {
+  
+  .container {
+    
+  }
+
+  .suggestions {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 }
